@@ -1,7 +1,7 @@
-from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('/',),
+    path('', views.home_dashboard, name='home_dashboard'),  # Root URL
+    path('dashboard/', views.home_dashboard, name='home_dashboard'),  # Dashboard URL
 ]
